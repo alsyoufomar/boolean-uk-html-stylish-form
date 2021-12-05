@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+body {
+  background-image: linear-gradient(45deg, #42f5ef, #5742f5, #e342f5);
+}
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.dude {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thanks {
+  margin-left: 5rem;
+}
+h1 {
+  font-size: 15rem;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  /* color: transparent; */
+}
+
+.thanks h1::after {
+  content: "";
+  width: calc(100% + 10rem);
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -5rem;
+  background-color: #e342f5;
+  z-index: -1;
+
+  transition: transform 250ms ease-in;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+body:hover .thanks h1::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.dude h1 {
+  color: transparent;
+  transition: color 150ms 250ms;
+}
+.thanks h1 {
+  color: transparent;
+  transition: color 250ms 250ms;
+}
+.dude h1::after {
+  content: "";
+  width: calc(100% + 10rem);
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: -5rem;
+  background-color: #42f5ef;
+  z-index: -1;
+
+  transition: transform 250ms ease-in;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+body:hover .dude h1::after {
+  transform: scaleX(1);
+  transition-delay: 250ms;
+  transform-origin: top;
+}
+body:hover .dude h1,
+body:hover .thanks h1 {
+  color: #000;
+}
