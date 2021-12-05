@@ -6,8 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
     <title>Full Stack Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
-
+    <main>
+      <form class="form" action="thanks.html">
+        <div class="greeting"><h1>Say Hello!</h1></div>
+        <div class="name">
+          <label
+            >Your Name<input required placeholder="Enter your name" type="text"
+          /></label>
+        </div>
+        <div class="email">
+          <label for=""
+            >Email
+            <input
+              required
+              placeholder="Enter your email address"
+              type="email"
+            />
+          </label>
+        </div>
+        <div class="service">
+          <label for=""
+            >Needed Services
+            <select required name="services" id="">
+              <option value="">Choose services</option>
+              <option value="service-1">service-1</option>
+              <option value="service-2">service-2</option>
+              <option value="service-3">service-3</option>
+            </select>
+          </label>
+        </div>
+        <div class="budget">
+          <label for=""
+            >Budget
+            <select required name="budget" id="">
+              <option value="">Select Budget</option>
+              <option value="budget-1">budget-1</option>
+              <option value="budget-2">budget-2</option>
+              <option value="budget-3">budget-3</option>
+            </select>
+          </label>
+        </div>
+        <div class="message">
+          <label for=""
+            >Message
+            <textarea
+              placeholder="Your message here..."
+              name=""
+              id="message"
+              cols="30"
+              rows="20"
+            ></textarea>
+          </label>
+        </div>
+        <div class="submit"><button>Submit &#8594;</button></div>
+      </form>
+    </main>
   </body>
 </html>
